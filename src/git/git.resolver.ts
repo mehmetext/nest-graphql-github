@@ -8,6 +8,6 @@ export class GitResolver {
 
   @Query(() => [Repo])
   repos(): Repo[] {
-    return [];
+    return this.gitService.getRepos();
   }
 }

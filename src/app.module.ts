@@ -12,6 +12,7 @@ import { GitModule } from './git/git.module';
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       sortSchema: true,
+      graphiql: true,
     }),
     GitModule,
   ],
