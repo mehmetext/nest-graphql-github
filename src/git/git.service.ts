@@ -6,7 +6,7 @@ import { GitProvider } from './providers/git.provider';
 export class GitService {
   constructor(private readonly gitProvider: GitProvider) {}
 
-  getRepos(): Repo[] {
-    return this.gitProvider.getRepos();
+  getRepos(username: string): Promise<Repo[]> {
+    return this.gitProvider.getRepos(username);
   }
 }

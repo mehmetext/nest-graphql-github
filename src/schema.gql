@@ -3,7 +3,7 @@
 # ------------------------------------------------------
 
 type Query {
-  repos: [Repo!]!
+  repos(username: String!): [Repo!]!
 }
 
 """GitHub repository entity"""

@@ -1,4 +1,4 @@
-import { Query, Resolver } from '@nestjs/graphql';
+import { Args, Query, Resolver } from '@nestjs/graphql';
 import { Repo } from './entities/repo.entity';
 import { GitService } from './git.service';
 
@@ -7,7 +7,7 @@ export class GitResolver {
   constructor(private readonly gitService: GitService) {}
 
   @Query(() => [Repo])
-  repos(): Repo[] {
-    return this.gitService.getRepos();
+  repos(@Args('username') username: string): Promise<Repo[]> {
+    return this.gitService.getRepos(username);
   }
 }
