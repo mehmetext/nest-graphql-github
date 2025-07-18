@@ -1,0 +1,325 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Query {
+  repos: [Repo!]!
+}
+
+"""GitHub repository entity"""
+type Repo {
+  """Whether forking is allowed"""
+  allow_forking: Boolean!
+
+  """The archive URL of the repo"""
+  archive_url: String!
+
+  """Whether the repo is archived"""
+  archived: Boolean!
+
+  """The assignees URL of the repo"""
+  assignees_url: String!
+
+  """The blobs URL of the repo"""
+  blobs_url: String!
+
+  """The branches URL of the repo"""
+  branches_url: String!
+
+  """The clone URL of the repo"""
+  clone_url: String!
+
+  """The collaborators URL of the repo"""
+  collaborators_url: String!
+
+  """The comments URL of the repo"""
+  comments_url: String!
+
+  """The commits URL of the repo"""
+  commits_url: String!
+
+  """The compare URL of the repo"""
+  compare_url: String!
+
+  """The contents URL of the repo"""
+  contents_url: String!
+
+  """The contributors URL of the repo"""
+  contributors_url: String!
+
+  """The creation date of the repo"""
+  created_at: String!
+
+  """The default branch of the repo"""
+  default_branch: String!
+
+  """The deployments URL of the repo"""
+  deployments_url: String!
+
+  """The description of the repo"""
+  description: String
+
+  """Whether the repo is disabled"""
+  disabled: Boolean!
+
+  """The downloads URL of the repo"""
+  downloads_url: String!
+
+  """The events URL of the repo"""
+  events_url: String!
+
+  """Whether the repo is a fork"""
+  fork: Boolean!
+
+  """The forks count of the repo"""
+  forks: Int!
+
+  """The forks count of the repo"""
+  forks_count: Int!
+
+  """The forks URL of the repo"""
+  forks_url: String!
+
+  """The full name of the repo"""
+  full_name: String!
+
+  """The git commits URL of the repo"""
+  git_commits_url: String!
+
+  """The git refs URL of the repo"""
+  git_refs_url: String!
+
+  """The git tags URL of the repo"""
+  git_tags_url: String!
+
+  """The git URL of the repo"""
+  git_url: String!
+
+  """Whether the repo has discussions"""
+  has_discussions: Boolean!
+
+  """Whether the repo has downloads"""
+  has_downloads: Boolean!
+
+  """Whether the repo has issues"""
+  has_issues: Boolean!
+
+  """Whether the repo has pages"""
+  has_pages: Boolean!
+
+  """Whether the repo has projects"""
+  has_projects: Boolean!
+
+  """Whether the repo has wiki"""
+  has_wiki: Boolean!
+
+  """The homepage of the repo"""
+  homepage: String
+
+  """The hooks URL of the repo"""
+  hooks_url: String!
+
+  """The HTML URL of the repo"""
+  html_url: String!
+
+  """The id of the repo"""
+  id: Int!
+
+  """Whether the repo is a template"""
+  is_template: Boolean!
+
+  """The issue comment URL of the repo"""
+  issue_comment_url: String!
+
+  """The issue events URL of the repo"""
+  issue_events_url: String!
+
+  """The issues URL of the repo"""
+  issues_url: String!
+
+  """The keys URL of the repo"""
+  keys_url: String!
+
+  """The labels URL of the repo"""
+  labels_url: String!
+
+  """The primary language of the repo"""
+  language: String
+
+  """The languages URL of the repo"""
+  languages_url: String!
+
+  """The license of the repo"""
+  license: RepoLicense
+
+  """The merges URL of the repo"""
+  merges_url: String!
+
+  """The milestones URL of the repo"""
+  milestones_url: String!
+
+  """The mirror URL of the repo"""
+  mirror_url: String
+
+  """The name of the repo"""
+  name: String!
+
+  """The node id of the repo"""
+  node_id: String!
+
+  """The notifications URL of the repo"""
+  notifications_url: String!
+
+  """The open issues count of the repo"""
+  open_issues: Int!
+
+  """The open issues count of the repo"""
+  open_issues_count: Int!
+
+  """The owner of the repo"""
+  owner: RepoOwner!
+
+  """Whether the repo is private"""
+  private: Boolean!
+
+  """The pulls URL of the repo"""
+  pulls_url: String!
+
+  """The last push date of the repo"""
+  pushed_at: String!
+
+  """The releases URL of the repo"""
+  releases_url: String!
+
+  """The size of the repo"""
+  size: Int!
+
+  """The SSH URL of the repo"""
+  ssh_url: String!
+
+  """The stargazers count of the repo"""
+  stargazers_count: Int!
+
+  """The stargazers URL of the repo"""
+  stargazers_url: String!
+
+  """The statuses URL of the repo"""
+  statuses_url: String!
+
+  """The subscribers URL of the repo"""
+  subscribers_url: String!
+
+  """The subscription URL of the repo"""
+  subscription_url: String!
+
+  """The SVN URL of the repo"""
+  svn_url: String!
+
+  """The tags URL of the repo"""
+  tags_url: String!
+
+  """The teams URL of the repo"""
+  teams_url: String!
+
+  """The topics of the repo"""
+  topics: [String!]!
+
+  """The trees URL of the repo"""
+  trees_url: String!
+
+  """The last update date of the repo"""
+  updated_at: String!
+
+  """The API URL of the repo"""
+  url: String!
+
+  """The visibility of the repo"""
+  visibility: String!
+
+  """The watchers count of the repo"""
+  watchers: Int!
+
+  """The watchers count of the repo"""
+  watchers_count: Int!
+
+  """Whether web commit signoff is required"""
+  web_commit_signoff_required: Boolean!
+}
+
+"""GitHub repository license entity"""
+type RepoLicense {
+  """The key of the license"""
+  key: String!
+
+  """The name of the license"""
+  name: String!
+
+  """The node id of the license"""
+  node_id: String!
+
+  """The SPDX id of the license"""
+  spdx_id: String!
+
+  """The URL of the license"""
+  url: String!
+}
+
+"""GitHub repository owner entity"""
+type RepoOwner {
+  """The avatar URL of the owner"""
+  avatar_url: String!
+
+  """The events URL of the owner"""
+  events_url: String!
+
+  """The followers URL of the owner"""
+  followers_url: String!
+
+  """The following URL of the owner"""
+  following_url: String!
+
+  """The gists URL of the owner"""
+  gists_url: String!
+
+  """The gravatar id of the owner"""
+  gravatar_id: String!
+
+  """The HTML URL of the owner"""
+  html_url: String!
+
+  """The id of the owner"""
+  id: Int!
+
+  """The login name of the owner"""
+  login: String!
+
+  """The node id of the owner"""
+  node_id: String!
+
+  """The organizations URL of the owner"""
+  organizations_url: String!
+
+  """The received events URL of the owner"""
+  received_events_url: String!
+
+  """The repos URL of the owner"""
+  repos_url: String!
+
+  """Whether the owner is a site admin"""
+  site_admin: Boolean!
+
+  """The starred URL of the owner"""
+  starred_url: String!
+
+  """The subscriptions URL of the owner"""
+  subscriptions_url: String!
+
+  """The type of the owner"""
+  type: String!
+
+  """The API URL of the owner"""
+  url: String!
+
+  """The user view type of the owner"""
+  user_view_type: String!
+}
