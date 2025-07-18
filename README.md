@@ -1,98 +1,219 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 🚀 NestJS GraphQL GitHub API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This project is a modern **NestJS-based GraphQL API** designed to fetch GitHub user repository information.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 📋 Features
 
-## Description
+- ✅ **GraphQL API** - Modern and flexible data querying
+- ✅ **GitHub API Integration** - Real-time repository information
+- ✅ **TypeScript** - Type safety and modern JavaScript support
+- ✅ **Modular Architecture** - Easy maintenance and scalability
+- ✅ **NestJS Framework** - Robust and scalable backend architecture
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 🛠️ Technologies
 
-## Project setup
+- **NestJS** - Progressive Node.js framework
+- **GraphQL** - Integrated with Apollo Server
+- **TypeScript** - Type safety
+- **GitHub API** - For fetching repository data
+- **pnpm** - Fast and efficient package manager
 
-```bash
-$ pnpm install
+## 🏗️ Project Structure
+
+```
+src/
+├── app.module.ts           # Main application module
+├── main.ts                 # Application entry point
+├── schema.gql             # GraphQL schema file
+└── git/                   # Git/GitHub module
+    ├── entities/          # GraphQL entities
+    │   └── repo.entity.ts # Repository entity
+    ├── providers/         # Data providers
+    │   ├── git.provider.ts
+    │   ├── github.provider.ts
+    │   └── mock.provider.ts
+    ├── git.module.ts      # Git module
+    ├── git.resolver.ts    # GraphQL resolvers
+    └── git.service.ts     # Business logic service
 ```
 
-## Compile and run the project
+## 🚀 Installation
+
+### Requirements
+
+- Node.js (v18 or higher)
+- pnpm
+
+### Steps
+
+1. **Clone the project:**
 
 ```bash
-# development
-$ pnpm run start
-
-# watch mode
-$ pnpm run start:dev
-
-# production mode
-$ pnpm run start:prod
+git clone <repository-url>
+cd nest-graphql-github
 ```
 
-## Run tests
+2. **Install dependencies:**
 
 ```bash
-# unit tests
-$ pnpm run test
-
-# e2e tests
-$ pnpm run test:e2e
-
-# test coverage
-$ pnpm run test:cov
+pnpm install
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+3. **Start the development server:**
 
 ```bash
-$ pnpm install -g @nestjs/mau
-$ mau deploy
+pnpm run start:dev
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+4. **Access GraphQL Playground:**
 
-## Resources
+```
+http://localhost:3000/graphql
+```
 
-Check out a few resources that may come in handy when working with NestJS:
+## 📖 Usage
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+### GraphQL Queries
 
-## Support
+#### Get all repositories for a user
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```graphql
+query GetUserRepos {
+  repos(username: "octocat") {
+    id
+    name
+    full_name
+    description
+    html_url
+    private
+    fork
+    language
+    stargazers_count
+    forks_count
+    created_at
+    updated_at
+    owner {
+      login
+      avatar_url
+      html_url
+    }
+    license {
+      name
+      key
+      spdx_id
+    }
+    topics
+    visibility
+    default_branch
+  }
+}
+```
 
-## Stay in touch
+#### Simple repository information
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```graphql
+query SimpleRepoInfo {
+  repos(username: "octocat") {
+    name
+    description
+    stargazers_count
+    language
+    html_url
+  }
+}
+```
 
-## License
+## 🔧 Development
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### Available Commands
+
+```bash
+# Start development server
+pnpm run start:dev
+
+# Production build
+pnpm run build
+pnpm run start:prod
+
+# Code formatting
+pnpm run format
+
+# Linting
+pnpm run lint
+
+# Tests
+pnpm run test
+pnpm run test:watch
+pnpm run test:cov
+pnpm run test:e2e
+```
+
+### GraphQL Schema Updates
+
+The project automatically generates the GraphQL schema in the `src/schema.gql` file. Changes made to entities will automatically reflect in the schema.
+
+## 📚 API Documentation
+
+### Endpoints
+
+- **GraphQL Playground**: `http://localhost:3000/graphql`
+- **GraphQL API**: `http://localhost:3000/graphql`
+
+### Main Query
+
+#### `repos(username: String!): [Repo!]!`
+
+Returns all public repositories for the specified user.
+
+**Parameters:**
+
+- `username` (String, required): GitHub username
+
+**Returns:**
+
+- List of repositories (see `Repo` entity for details)
+
+## 🏛️ Architecture
+
+### Layered Architecture
+
+1. **Resolver Layer** (`git.resolver.ts`): Handles GraphQL queries
+2. **Service Layer** (`git.service.ts`): Manages business logic
+3. **Provider Layer** (`providers/`): Manages data sources
+
+### Provider Pattern
+
+- **GitProvider**: Base provider interface
+- **GithubProvider**: GitHub API integration
+- **MockProvider**: Mock data for testing and development
+
+## 🔮 Future Features
+
+- [ ] Authentication support
+- [ ] Rate limiting
+- [ ] Caching mechanism
+- [ ] Repository detail information
+- [ ] Commit history
+- [ ] Issues and Pull Requests
+- [ ] Search filters
+- [ ] Pagination support
+
+## 🤝 Contributing
+
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 📞 Contact
+
+If you have any questions or suggestions, please feel free to open an issue.
+
+---
+
+⭐ **If you found this project helpful, don't forget to give it a star!**
